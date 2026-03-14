@@ -11,10 +11,6 @@ void Table::set(int i, int j, char c)
     mat[i][j] = c;
 }
 
-char Table::get(int i, int j) const
-{
-    return mat[i][j];
-}
 
 void Table::showHeader()                  
 {
@@ -28,41 +24,15 @@ void Table::showGame()
 {
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++)
-            std::cout << get(i,j) <<'|';
+            std::cout << mat[i][j] <<'|';
         std::cout << '\n';
     }
 }
 
-
-
-void Table::getPos() {
-    int pos;
-    std::cout << "Digite a posicao da jogada! (1-9): ";
-    std::cin >> pos;
-    setPos(pos);
-}   
-
-
-void Table::setPos(int pos)
+void Table::showWinner(std::string _winner)
 {
-    switch(pos){
-        case p1:
-            set(0,0,'X');
-        case p2:
-            set(0,1,'X');
-        case p3:
-            set(0,2,'X');
-        case p4:
-            set(1,0,'X');
-        case p5:
-            set(1,2,'X');
-        case p6:
-            set(1,3,'X');
-        case p7:
-            set(2,0,'X');
-        case p8:
-            set(2,1,'X');
-        case p9:
-            set(2,2,'X');
-    }
+    if(_winner != "Empate")
+        std::cout <<  "Ganhador: " << _winner << std::endl;
+    else 
+        std::cout << _winner << std::endl;
 }
