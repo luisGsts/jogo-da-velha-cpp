@@ -20,6 +20,8 @@ public:
     void setPos(int pos);                                      // set the position played
     void getPos();                                             // get the position the player wanna mark down on table
     void checkWin();                                           // check if an player already won
+    void restartGame();        
+                                   
 };
 
 

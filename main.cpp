@@ -8,6 +8,8 @@ void clearScreen() {
     std::cout << "\033[2J\033[1;1H"; 
 }
 
+
+
 int main(){
     Jogo j;
     bool gameOn = true;
@@ -21,11 +23,13 @@ int main(){
             j.getPos();
 
             if (j.playerWin() || j.getWinner() == "Empate") {
-                j.showHeader();
                 clearScreen();
+                j.showHeader();
                 j.showGame();
                 j.showWinner(j.getWinner());
-                gameOn = false;
+                gameOn = j.playAgain();
+                if(gameOn)
+                    j.restartGame();
             }
         }
         catch(const std::runtime_error& e) {

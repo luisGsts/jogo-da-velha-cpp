@@ -17,7 +17,8 @@ public:
     void showGame();                // show the game on screen
     void showHeader();              // show the header
     void showWinner(std::string);
-    
+    void clearTable();
+    bool playAgain();
 };  
 
 #endif

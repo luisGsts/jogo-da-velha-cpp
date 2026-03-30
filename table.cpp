@@ -6,6 +6,12 @@ Table::Table()
         c.fill(' ');                    // start the array with a blank space
 }
 
+void Table::clearTable()                // clear the array
+{
+    for(auto &c : mat)
+        c.fill(' ');
+}
+
 void Table::set(int i, int j, char c)
 {
     mat[i][j] = c;
@@ -35,4 +41,15 @@ void Table::showWinner(std::string _winner)
         std::cout <<  "Ganhador: " << _winner << std::endl;
     else 
         std::cout << _winner << std::endl;
+}
+
+bool Table::playAgain() {
+    char answer;
+    std::cout << "Jogar novamente? [Y/N]\n>";
+    std::cin >> answer;
+    if(answer != 'y' && answer != 'Y' && answer != 'n' && answer != 'N')
+        throw std::runtime_error("Resposta invalida!");
+    if(answer == 'y' || answer =='Y')
+        return true;
+    return false;
 }

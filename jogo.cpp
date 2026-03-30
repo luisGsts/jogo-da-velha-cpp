@@ -4,7 +4,7 @@
 void Jogo::changePlayer()
 {
     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-}
+    }
 
 void Jogo::getPos() 
 {
@@ -18,7 +18,11 @@ void Jogo::getPos()
     setPos(pos);
 }
 
-  
+void Jogo::restartGame()
+{
+    Table::clearTable();
+    win = false;
+}
 
 
 void Jogo::setPos(int pos)
