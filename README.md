@@ -6,7 +6,9 @@ O projeto aplica conceitos de Orientação a Objetos (POO), herança, tratamento
 ## Funcionalidades
 
 **Modo 2 Jogadores:** Alternância automática entre as peças `X` e `O`.
+
 **Tratamento de Erros:** Sistema robusto com `try-catch` para capturar jogadas fora do tabuleiro (1-9) ou em posições já ocupadas.
+
 **Game Loop:** Opção para reiniciar e jogar novamente sem fechar o programa.
 
 ---
